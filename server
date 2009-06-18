@@ -1,0 +1,182 @@
+Script started on Tue Jun  9 14:47:52 2009
+bash-3.2$ script/server
+=> Booting Mongrel (use 'script/server webrick' to force WEBrick)
+=> Rails 2.2.2 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+** Starting Mongrel listening at 0.0.0.0:3000
+** Starting Rails with development environment...
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel 1.1.4 available at 0.0.0.0:3000
+** Use CTRL-C to stop.
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:50:22) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (4.5ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mPage Load (0.6ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 51ms (View: 25, DB: 5) | 200 OK [http://0.0.0.0/]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:50:29) [GET]
+  Parameters: {"name"=>"about"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'about') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 2) [0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages".parent_id = 2) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/about]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-06-09 14:50:56) [GET]
+  [4;35;1mPage Load (1.7ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 15ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:51:03) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"c7014d7d24f07e7bd618d5de2a22cad5cd3ba4e3", "login"=>"ryan", "password"=>"jarvis"}
+  [4;36;1mPage Load (2.0ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'ryan') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 63ms (View: 14, DB: 2) | 200 OK [http://0.0.0.0/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:51:06) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"c7014d7d24f07e7bd618d5de2a22cad5cd3ba4e3", "login"=>"ryan", "password"=>""}
+  [4;36;1mPage Load (1.8ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'ryan') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 78ms (View: 8, DB: 2) | 200 OK [http://0.0.0.0/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-06-09 14:51:12) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"c7014d7d24f07e7bd618d5de2a22cad5cd3ba4e3", "login"=>"ryan", "password"=>"password"}
+  [4;36;1mPage Load (2.2ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'ryan') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 23ms (View: 8, DB: 3) | 200 OK [http://0.0.0.0/session]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:46) [GET]
+  Parameters: {"name"=>"home"}
+  [4;36;1mPage Load (1.8ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/home]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2009-06-09 14:51:48) [GET]
+  Parameters: {"name"=>"contact"}
+  [4;35;1mPage Load (2.7ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'contact') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering messages/new
+Completed in 28ms (View: 9, DB: 3) | 200 OK [http://0.0.0.0/messages/new?name=contact]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:49) [GET]
+  Parameters: {"name"=>"agent"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'agent') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 4) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages".parent_id = 4) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/agent]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:50) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/home]
+
+
+Processing LinksController#list (for 127.0.0.1 at 2009-06-09 14:51:51) [GET]
+  Parameters: {"name"=>"specials"}
+  [4;36;1mPage Load (1.8ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM "categories" ORDER BY title[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'specials') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering links/list
+  [4;35;1mLink Load (0.2ms)[0m   [0mSELECT * FROM "links" INNER JOIN "categories_links" ON "links".id = "categories_links".link_id WHERE ("categories_links".category_id = 3 ) [0m
+  [4;36;1mLink Load (0.4ms)[0m   [0;1mSELECT * FROM "links" INNER JOIN "categories_links" ON "links".id = "categories_links".link_id WHERE ("categories_links".category_id = 1 ) [0m
+  [4;35;1mLink Load (0.3ms)[0m   [0mSELECT * FROM "links" INNER JOIN "categories_links" ON "links".id = "categories_links".link_id WHERE ("categories_links".category_id = 2 ) [0m
+Completed in 97ms (View: 16, DB: 3) | 200 OK [http://0.0.0.0/links/list?name=specials]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:52) [GET]
+  Parameters: {"name"=>"quote"}
+  [4;36;1mPage Load (1.7ms)[0m   [0;1mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM "pages" WHERE ("pages"."name" = 'quote') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 5) [0m
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://0.0.0.0/quote]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:53) [GET]
+  Parameters: {"name"=>"agent"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'agent') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 4) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages".parent_id = 4) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/agent]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2009-06-09 14:51:53) [GET]
+  Parameters: {"name"=>"contact"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'contact') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering messages/new
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/messages/new?name=contact]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2009-06-09 14:51:54) [GET]
+  Parameters: {"name"=>"contact"}
+  [4;35;1mPage Load (1.7ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'contact') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering messages/new
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://0.0.0.0/messages/new?name=contact]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:54) [GET]
+  Parameters: {"name"=>"about"}
+  [4;35;1mPage Load (1.7ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'about') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 2) [0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages".parent_id = 2) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/about]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2009-06-09 14:51:56) [GET]
+  Parameters: {"name"=>"home"}
+  [4;35;1mPage Load (1.8ms)[0m   [0mSELECT * FROM "pages" WHERE (parent_id IS NULL and admin != 't') ORDER BY position[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM "pages" WHERE ("pages"."name" = 'home') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "pages" WHERE ("pages".parent_id = 1) [0m
+Completed in 17ms (View: 7, DB: 2) | 200 OK [http://0.0.0.0/home]

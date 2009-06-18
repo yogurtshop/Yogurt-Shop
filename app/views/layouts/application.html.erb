@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title><%= @pagetitle %></title>
+<%= stylesheet_link_tag 'dimension', 'scaffold'%>
+</head>
+
+<body>
+	<div id='pagewrapper'>
+		<div id='header'>
+			<p><img src = "http://i43.tinypic.com/345kimq.png" height = "180" width = "800"></p>
+			</div>
+			<div id='navbar'>
+				<ul>
+				<% @tabs.each do |page| -%>
+					<li <%= "id='current'" if @page && (@page == page || @page.parent == page) %>><% if page.redirect? %>
+					  <%= link_to page.tab, :action => page.action_name, :controller => page.controller_name, :name => page.name %>
+					<% else %>
+					  <%= link_to page.tab, view_page_path(page.name) %>
+					<% end %></li>
+				<% end -%>
+			</ul>
+			</div>
+	<div id='content'>
+		<h2><%= flash[:notice] %></h2>
+<%= yield %>
+</div>
+
+</body>	
+	<div align=center>
+		<font size=1>
+			<link>
+			   <% if logged_in? %>
+			      <%= link_to "Log Out", logout_path %>
+			   <% else %>
+			      <%= link_to "The Yogurt Shop® 2009", login_path %>
+			   <% end %>
+			</link>
+	</div>
+</html>

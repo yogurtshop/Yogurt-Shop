@@ -1,0 +1,42 @@
+<p>
+  <b>Name:</b>
+  <%=h @page.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @page.title %>
+</p>
+
+<p>
+  <b>Tab:</b>
+  <%=h @page.tab %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @page.body %>
+</p>
+
+<p>
+  <b>Admin?:</b>
+<%= @page.admin? ? "TRUE" : "FALSE" %>
+</p>
+
+<p>
+  <b>Redirect:</b>
+  <%=h @page.redirect? %>
+</p>
+
+<p>
+  <b>Controller:</b>
+  <%=h @page.controller_name %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%=h @page.action_name %>
+</p>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

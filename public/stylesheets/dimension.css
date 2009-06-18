@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#pagewrapper {
+    width: 800px;
+    margin: 10px auto;
+    padding: 0;
+    border: 0px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content {
+    padding: 20px 0px;
+}
+#header {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+#header p {
+    padding: 0px 0px;
+    font-size: 24px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#footer {
+    background-color: #999;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    clear:both;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+#footer p, #footer a {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    font-weight:bold;
+    margin: 0;
+    padding: 2px;
+}
+/* Navigation Bar */
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+    background-color: #f398e7;
+    color: White;
+    float: left;
+    width: 100%;
+    list-style: none;
+    font-weight: bold;
+    font-size: 13px;
+	border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+#navbar ul li { 
+    display: center;
+    color: White;
+    float: center;
+    border-right: 1px solid #333;
+    font-family: arial, helvetica, sans-serif;
+}
+#navbar ul li a {
+    padding: 0.2em 0.7em;
+    background-color: #f398e7; 
+    color: White;
+    text-decoration: none;
+    float:left;
+}
+#navbar ul li a:hover {
+    background-color: #999;
+    color: #fff;
+}
+#navbar #current a {
+	background-color: #ffffff;
+	color: #000000;
+}
+#subnav {
+		display: inline;
+		width: 160px;
+		float: left;
+		margin: 0 20px 50px -10px;
+	}
+	#subnav ul {
+	    list-style: none;
+	    font-weight: bold;
+	    font-size: 13px;
+		margin: 0;
+		padding: 0;
+	}
+	#subnav ul li {
+		background-color: #1F3A8D;
+		border-bottom: 1px solid #333;
+		border-top: 1px solid #333;
+	}
+	#subnav ul li a {
+		padding: 5px 10px;
+		display:block;
+		color:white;
+		text-decoration: none;
+	}
+	#subnav ul li a:hover {
+	    background-color: #999;
+	    color: #fff;
+	}
